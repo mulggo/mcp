@@ -738,7 +738,9 @@ async def run_agent(question, strands_tools, mcp_servers, historyMode, container
         
     # get reference
     result += get_reference(references)
-    containers['notification'][index-1].markdown(result)
+
+    if containers is not None:
+        containers['notification'][index-1].markdown(result)
 
     if debug_mode == 'Enable' and containers is not None:
         containers['status'].info(get_status_msg(f"end)"))
