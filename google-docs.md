@@ -24,3 +24,4 @@ Google OAUTH를 위해 Client ID와 Client Secret가 필요합니다. 아래와 
 2. 앱에서 사용자 데이터에 액세스하려면 OAuth 2.0 클라이언트 ID를 하나 이상 만들어야 합니다. 클라이언트 만들기를 선택하여 Client ID와 Client Secret을 만들고 저장합니다.
 
 
+API 및 서비스에서 Google Docs, Google Calendar, Google Drive, Gmail, Google Sheets, Google Slides등을 설정합니다.
