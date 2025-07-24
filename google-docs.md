@@ -1,6 +1,6 @@
 # MCP - Google Docs
 
-[taylorwilsdon - google_workspace_mcp](https://github.com/taylorwilsdon/google_workspace_mcp)은 Google Docs뿐 아니라 Google Calendar, Google Drive, Gmail, Google Sheets, Google Slides등을 지원하고 있습니다. 이때의 json 설정정보는 아래와 같습니다.
+[taylorwilsdon - google_workspace_mcp](https://github.com/taylorwilsdon/google_workspace_mcp)은 Google Docs뿐 아니라 Google Calendar, Google Drive, Gmail, Google Sheets, Google Slides등을 지원하고 있습니다. 이때의 json 설정 정보는 아래와 같습니다.
 
 ```java
 {
