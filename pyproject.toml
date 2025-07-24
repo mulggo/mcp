@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-app"
+version = "0.1.0"
+description = "MCP Application for RAG and other AI capabilities"
+readme = "README.md"
+authors = [
+    {name = "AWS", email = "example@example.com"}
+]
+license = {text = "MIT"}
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "streamlit==1.41.0",
+    "streamlit-chat",
+    "pandas",
+    "numpy",
+    "boto3",
+    "langchain_aws",
+    "langchain",
+    "langchain_community",
+    "langgraph",
+    "langchain_experimental",
+    "langgraph-supervisor",
+    "langgraph-swarm",
+    "tavily-python==0.5.0",
+    "yfinance==0.2.52",
+    "rizaio==0.8.0",
+    "pytz>=2025.2",
+    "beautifulsoup4==4.12.3",
+    "plotly_express==0.4.1",
+    "matplotlib==3.10.0",
+    "PyPDF2==3.0.1",
+    "opensearch-py",
+    "mcp",
+    "langchain-mcp-adapters>=0.1.9",
+    "wikipedia",
+    "aioboto3",
+    "requests",
+    "uv",
+    "kaleido",
+    "diagrams",
+    "graphviz",
+    "sarif-om==1.0.4",
+    "arxiv==2.2.0",
+    "chembl-webresource-client==0.10.9",
+    "pytrials==1.0.0",
+    "strands-agents>=1.0.1",
+    # strands-agents-tools 버전 제약 완화
+    "strands-agents-tools",
+    "reportlab",
+    "arize-phoenix",
+    "colorama",
+    # rich 버전 명시 (streamlit과 호환되는 버전)
+    "rich==13.9.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/mcp"
+"Bug Tracker" = "https://github.com/yourusername/mcp/issues"
+
+[tool.setuptools]
+packages = ["application"]

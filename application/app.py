@@ -18,7 +18,7 @@ import random
 import string
 import aws_cost.implementation as aws_cost
 import langgraph_agent
-import strands_agent
+import strands_agent as strands
 import swarm_agent
 
 logging.basicConfig(
@@ -498,7 +498,7 @@ if prompt := st.chat_input("메시지를 입력하세요."):
                 if agent_type == "LangGraph":
                     response, image_url = asyncio.run(langgraph_agent.run_agent(prompt, mcp_servers, history_mode, containers))    
                 else:
-                    response, image_url = asyncio.run(strands_agent.run_agent(prompt, [], mcp_servers, history_mode, containers))
+                    response, image_url = asyncio.run(strands.run_agent(prompt, [], mcp_servers, history_mode, containers))
 
             # if langgraph_agent.response_msg:
             #     with st.expander("### 수행 결과", expanded=False):
@@ -633,4 +633,14 @@ if prompt := st.chat_input("메시지를 입력하세요."):
             chat.save_chat_history(prompt, response)
         
 
+def main():
+    """Entry point for the application."""
+    # This function is used as an entry point when running as a package
+    # The code above is already running the Streamlit app
+    pass
+
+
+if __name__ == "__main__":
+    # This is already handled by Streamlit
+    pass
 
