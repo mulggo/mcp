@@ -643,4 +643,3 @@ def main():
 if __name__ == "__main__":
     # This is already handled by Streamlit
     pass
-

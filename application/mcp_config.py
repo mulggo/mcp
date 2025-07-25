@@ -49,7 +49,6 @@ def load_config(mcp_type):
         mcp_type = 'aws-api-mcp-server'
     elif mcp_type == "aws-knowledge":
         mcp_type = 'aws-knowledge-mcp-server'
-    logger.info(f"mcp_type: {mcp_type}")
 
     if mcp_type == "basic":
         return {
@@ -478,14 +477,9 @@ def load_selected_config(mcp_servers: dict):
     
     loaded_config = {}
     for server in mcp_servers:
-        logger.info(f"server: {server}")
-
-        config = load_config(server)
-        # logger.info(f"config: {config}")
-        
+        config = load_config(server)        
         if config:
             loaded_config.update(config["mcpServers"])
-    # logger.info(f"loaded_config: {loaded_config}")        
     return {
         "mcpServers": loaded_config
     }
