@@ -39,8 +39,10 @@ def load_config(mcp_type):
         mcp_type = 'aws_storage'
     elif mcp_type == "knowledge base":
         mcp_type = 'knowledge_base_lambda'
-    elif mcp_type == "code interpreter":
-        mcp_type = 'code_interpreter'
+    elif mcp_type == "repl coder":
+        mcp_type = 'repl_coder'
+    elif mcp_type == "agentcore coder":
+        mcp_type = 'agentcore_coder'
     elif mcp_type == "aws cli":
         mcp_type = 'aws_cli'
     elif mcp_type == "text editor":
@@ -219,17 +221,28 @@ def load_config(mcp_type):
             }
         }    
     
-    elif mcp_type == "code_interpreter":
+    elif mcp_type == "repl_coder":
         return {
             "mcpServers": {
                 "aws_storage": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_coder.py"
+                        "application/mcp_server_repl_coder.py"
                     ]
                 }
             }
         }    
+    elif mcp_type == "agentcore_coder":
+        return {
+            "mcpServers": {
+                "agentcore_coder": {
+                    "command": "python",
+                    "args": [
+                        "application/mcp_server_agentcore_coder.py"
+                    ]
+                }
+            }
+        }
     
     elif mcp_type == "aws_cli":
         return {

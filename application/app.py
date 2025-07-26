@@ -185,7 +185,7 @@ with st.sidebar:
             mcp_options = [
                 "basic", "tavily-search", "aws-api", "aws-knowledge", "aws document", "aws cost", "aws cli", 
                 "use_aws", "aws cloudwatch", "aws storage", "image generation", "aws diagram",
-                "code interpreter","knowledge base", "tavily", "perplexity", "ArXiv", "wikipedia", 
+                "repl coder","agentcore coder","knowledge base", "tavily", "perplexity", "ArXiv", "wikipedia", 
                 "filesystem", "terminal", "text editor", "context7", "puppeteer", 
                 "playwright", "firecrawl", "obsidian", "airbnb", 
                 "pubmed", "chembl", "clinicaltrial", "arxiv-manual", "사용자 설정"
@@ -194,7 +194,7 @@ with st.sidebar:
             mcp_options = [ 
                 "basic", "tavily-search", "aws-api", "aws-knowledge", "aws document", "aws cost", "aws cli", 
                 "use_aws", "aws cloudwatch", "aws storage", "image generation", "aws diagram",
-                "code interpreter", "knowledge base", "tavily", "ArXiv", "wikipedia", 
+                "repl coder", "agentcore coder", "knowledge base", "tavily", "ArXiv", "wikipedia", 
                 "filesystem", "terminal", "text editor", "playwright", "airbnb",
                 "pubmed", "chembl", "clinicaltrial", "arxiv-manual", "사용자 설정"
             ]
