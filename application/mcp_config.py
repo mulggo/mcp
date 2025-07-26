@@ -11,7 +11,7 @@ logging.basicConfig(
         logging.StreamHandler(sys.stderr)
     ]
 )
-logger = logging.getLogger("mcp-cost")
+logger = logging.getLogger("mcp-config")
 
 config = utils.load_config()
 print(f"config: {config}")
@@ -58,7 +58,7 @@ def load_config(mcp_type):
                 "search": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_basic.py"
+                        f"{workingDir}/mcp_server_basic.py"
                     ]
                 }
             }
@@ -69,7 +69,7 @@ def load_config(mcp_type):
                 "imageGeneration": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_image_generation.py"
+                        f"{workingDir}/mcp_server_image_generation.py"
                     ]
                 }
             }
@@ -146,7 +146,7 @@ def load_config(mcp_type):
                 "aws_cost": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_aws_cost.py"
+                        f"{workingDir}/mcp_server_aws_cost.py"
                     ]
                 }
             }
@@ -157,7 +157,7 @@ def load_config(mcp_type):
                 "aws_cloudwatch_log": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_aws_log.py"
+                        f"{workingDir}/mcp_server_aws_log.py"
                     ],
                     "env": {
                         "AWS_REGION": aws_region,
@@ -173,7 +173,7 @@ def load_config(mcp_type):
                 "aws_storage": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_aws_storage.py"
+                        f"{workingDir}/mcp_server_aws_storage.py"
                     ]
                 }
             }
@@ -215,7 +215,7 @@ def load_config(mcp_type):
                 "knowledge_base_lambda": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_lambda_knowledge_base.py"
+                        f"{workingDir}/mcp_server_lambda_knowledge_base.py"
                     ]
                 }
             }
@@ -227,7 +227,7 @@ def load_config(mcp_type):
                 "aws_storage": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_repl_coder.py"
+                        f"{workingDir}/mcp_server_repl_coder.py"
                     ]
                 }
             }
@@ -238,7 +238,7 @@ def load_config(mcp_type):
                 "agentcore_coder": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_agentcore_coder.py"
+                        f"{workingDir}/mcp_server_agentcore_coder.py"
                     ]
                 }
             }
@@ -250,7 +250,7 @@ def load_config(mcp_type):
                 "aw-cli": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_aws_cli.py"
+                        f"{workingDir}/mcp_server_aws_cli.py"
                     ]
                 }
             }
@@ -274,7 +274,7 @@ def load_config(mcp_type):
                 "wikipedia": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_wikipedia.py"
+                        f"{workingDir}/mcp_server_wikipedia.py"
                     ]
                 }
             }
@@ -357,7 +357,7 @@ def load_config(mcp_type):
                 "pubmed": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_pubmed.py"  
+                        f"{workingDir}/mcp_server_pubmed.py"  
                     ]
                 }
             }
@@ -369,7 +369,7 @@ def load_config(mcp_type):
                 "chembl": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_chembl.py"
+                        f"{workingDir}/mcp_server_chembl.py"
                     ]
                 }
             }
@@ -381,7 +381,7 @@ def load_config(mcp_type):
                 "clinicaltrial": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_clinicaltrial.py"
+                        f"{workingDir}/mcp_server_clinicaltrial.py"
                     ]
                 }
             }
@@ -393,7 +393,7 @@ def load_config(mcp_type):
                 "arxiv-manager": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_arxiv.py"
+                        f"{workingDir}/mcp_server_arxiv.py"
                     ]
                 }
             }
@@ -405,7 +405,7 @@ def load_config(mcp_type):
                 "tavily-manager": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_tavily.py"
+                        f"{workingDir}/mcp_server_tavily.py"
                     ]
                 }
             }
@@ -416,7 +416,7 @@ def load_config(mcp_type):
                 "use_aws": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_use_aws.py"
+                        f"{workingDir}/mcp_server_use_aws.py"
                     ]
                 }
             }
@@ -428,7 +428,7 @@ def load_config(mcp_type):
                 "use_aws": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_use_aws.py"
+                        f"{workingDir}/mcp_server_use_aws.py"
                     ],
                     "env": {
                         "AWS_REGION": aws_region,
@@ -444,7 +444,7 @@ def load_config(mcp_type):
                 "aws_knowledge_base": {
                     "command": "python",
                     "args": [
-                        "application/mcp_server_kb.py"
+                        f"{workingDir}/mcp_server_kb.py"
                     ],
                     "env": {
                         "KB_INCLUSION_TAG_KEY": projectName
@@ -459,7 +459,7 @@ def load_config(mcp_type):
                 "awslabs.aws-api-mcp-server": {
                     "command": "uvx",
                     "args": [
-                            "awslabs.aws-api-mcp-server@latest"
+                        "awslabs.aws-api-mcp-server@latest"
                     ],
                     "env": {
                         "AWS_REGION": aws_region,
