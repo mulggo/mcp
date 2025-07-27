@@ -22,7 +22,7 @@ client = boto3.client(
 )
 sessionId = None
 
-def get_code_interpreter_sessionId():
+def create_code_interpreter_sessionId():
     session_id = None
     response = client.list_code_interpreter_sessions(
         codeInterpreterIdentifier='aws.codeinterpreter.v1',
@@ -58,7 +58,7 @@ def agentcore_coder(code):
     # get the sessionId
     global sessionId
     if sessionId is None:
-        sessionId = get_code_interpreter_sessionId()
+        sessionId = create_code_interpreter_sessionId()
         logger.info(f"sessionId: {sessionId}")
     else:
         logger.info(f"sessionId: {sessionId}")
@@ -73,11 +73,11 @@ def agentcore_coder(code):
             logger.info(f"status: {status}")
             if status != 'READY':
                 logger.info(f"sessionId: {sessionId} is not ready")
-                sessionId = get_code_interpreter_sessionId()
+                sessionId = create_code_interpreter_sessionId()
                 time.sleep(5)
         except Exception as e:
             logger.info(f"error of get_code_interpreter_session: {e}")
-            sessionId = get_code_interpreter_sessionId()
+            sessionId = create_code_interpreter_sessionId()
 
     execute_response = client.invoke_code_interpreter(
         codeInterpreterIdentifier="aws.codeinterpreter.v1",
