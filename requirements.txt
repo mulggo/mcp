@@ -42,3 +42,19 @@ colorama
 rich==13.9.0
 
 bedrock-agentcore
+
+## ## 권장 설치 순서
+# python -m venv venv
+# venv/bin/pip install --upgrade pip
+
+# pip install boto3 aioboto3 requests "pytz>=2025.2"
+# pip install pandas numpy "matplotlib==3.10.0" "plotly_express==0.4.1"
+# pip install "streamlit==1.41.0" streamlit-chat "rich==13.9.0"
+# pip install langchain langchain_aws langchain_community langchain_experimental
+# pip install langgraph langgraph-supervisor langgraph-swarm
+# pip install mcp "langchain-mcp-adapters>=0.1.9"
+# pip install bedrock-agentcore "strands-agents>=1.0.1" strands-agents-tools
+# pip install "tavily-python==0.5.0" "yfinance==0.2.52" "rizaio==0.8.0" wikipedia
+# pip install "arxiv==2.2.0" "chembl-webresource-client==0.10.9" "pytrials==1.0.0"
+# pip install "PyPDF2==3.0.1" "beautifulsoup4==4.12.3" opensearch-py reportlab
+# pip install kaleido diagrams graphviz uv arize-phoenix colorama "sarif-om==1.0.4"
