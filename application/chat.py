@@ -201,10 +201,17 @@ def initiate():
 
 def clear_chat_history():
     global memory_chain
-    memory_chain = []
+    # 올바른 ConversationBufferWindowMemory 객체 생성 (initiate() 함수와 동일)
+    memory_chain = ConversationBufferWindowMemory(memory_key="chat_history", output_key='answer', return_messages=True, k=5)
     map_chain[user_id] = memory_chain
 
 def save_chat_history(text, msg):
+    global memory_chain
+    
+    # memory_chain이 초기화되지 않은 경우 initiate() 호출
+    if 'memory_chain' not in globals() or memory_chain is None:
+        initiate()
+    
     memory_chain.chat_memory.add_user_message(text)
     if len(msg) > MSG_LENGTH:
         memory_chain.chat_memory.add_ai_message(msg[:MSG_LENGTH])                          

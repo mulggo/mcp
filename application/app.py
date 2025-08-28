@@ -190,7 +190,7 @@ with st.sidebar:
             ]
         else:
             mcp_options = [ 
-                "basic", "short-term memory", "long-term memory", "tavily-search", "aws-api", "aws-knowledge", "kb-retriever", "aws document", "aws cost", "aws cli", "aws ccapi",
+                "basic", "short-term memory", "long-term memory", "tavily-search", "aws-api", "aws-knowledge", "aws document", "aws cost", "aws cli", "aws ccapi",
                 "use_aws", "aws cloudwatch", "aws storage", "image generation", "aws diagram",
                 "repl coder", "agentcore coder", "kb-retriever", "knowledge base", "tavily", "ArXiv", "wikipedia", 
                 "filesystem", "terminal", "text editor", "agentcore-browser", "playwright", "airbnb",
